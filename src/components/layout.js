@@ -29,8 +29,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <nav css={nav} >
-        <div style={{zIndex:'100'}}>
+      <nav css={nav}>
+        <div style={{ zIndex: "100" }}>
           <h4>Mealfeaver</h4>
         </div>
         <div css={navlinks}>
@@ -103,31 +103,36 @@ export default Layout
 const nav = css`
  display: flex;
  justify-content: space-around;
- position: absolute;
- padding: 30px 10px;
- width: 100%;
+ padding: 10px;
+    width: 100%;
+    background: #ffa14c;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index:40;
+    box-shadow: 0px 2px 20px rgba(0,0,0,0.09);
 }
 
 `
 
 const navlinks = css`
-z-index: 100;
- ul{
-  a{
-    color: white;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    padding-left: 40px;
-    letter-spacing: 0.2px;
-    font-size: 16px;
-    line-height: 1.8em;
-    font-weight: 600;
-    font-family: "Open Sans",Sans-serif;
-    :hover{
-      text-decoration: underline;
+  z-index: 100;
+  ul {
+    a {
+      color: white;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      padding-left: 40px;
+      letter-spacing: 0.2px;
+      font-size: 16px;
+      line-height: 1.8em;
+      font-weight: 600;
+      font-family: "Open Sans", Sans-serif;
+      :hover {
+        text-decoration: underline;
+      }
     }
   }
- } 
 `
 
 const paragraph = css`

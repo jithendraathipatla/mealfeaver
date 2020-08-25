@@ -1,41 +1,17 @@
 import React from "react"
-import { Link } from "gatsby"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import ResturantsNearyou from "../components/resturantsinyourarea"
+
 import { css } from "@emotion/core"
+import Categories from "../components/categories"
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "Cycle.PNG" }) {
-        childImageSharp {
-          fluid(maxWidth: 400) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
   return (
     <Layout>
       <SEO title="Home" />
-      <div
-        style={{
-          maxWidth: `100%`,
-          position: "relative",
-        }}
-      >
-        <Image />
-        <div
-          style={{ width: "600px", position: "absolute", marginTop: "-43%" }}
-        ></div>
+      <div>
+        <Categories />
         <div css={division}></div>
-        <ResturantsNearyou />
-
         <div css={sponser}>
           <div>
             <img src="https://puzzlerbox.com/template-kits/food-delivery/wp-content/uploads/sites/37/elementor/thumbs/01-elements-30-food-delivery-icons-W5NQ6ZA-otks8k8vwl3ur0ri2maolpef6u6k5lljp3zmojeo6g.png" />
@@ -68,8 +44,6 @@ const IndexPage = () => {
 export default IndexPage
 
 const sponser = css`
-  background-image: url(https://puzzlerbox.com/template-kits/food-delivery/wp-content/uploads/sites/37/2020/08/bg_bottom_n.png);
-  opacity: 0.65;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
   display: flex;
   justify-content: space-around;
@@ -77,7 +51,7 @@ const sponser = css`
   text-align: center;
   color: black;
   div :nth-child(1) {
-    border-right: 1px solid black;
+    border-right: 1px solid #242424;
   }
   h3 {
     color: #000000;
@@ -108,5 +82,5 @@ const division = css`
   border-width: 0px 0px 1px 0px;
   border-color: rgba(255, 136, 136, 0.31);
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-  padding: 100px 0px 100px 0px;
+  padding: 0px 0px 100px 0px;
 `
