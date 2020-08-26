@@ -83,9 +83,8 @@ const About = () => {
               <br />
               Monday – Friday, 9:30 am – 5:30 pm
               <br />
-              <br />
+              
               <a href="#">Get Directions</a>
-              <br />
               <br />
             </p>
             <iframe
@@ -113,7 +112,7 @@ const last = css`
   background-color: #f8f6eb;
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   margin: 0px 60px 0px 60px;
-  padding: 40px 40px 40px 40px;
+  padding: 40px 40px 10px 40px;
   p {
     color: #000000;
     font-family: "Open Sans", Sans-serif;
@@ -129,7 +128,7 @@ const seperator = css`
 `
 
 const three = css`
-  padding: 0px 180px 0px 145px;
+  padding: 0px 180px 0px 141px;
   display: flex;
   justify-content: space-between;
 `
