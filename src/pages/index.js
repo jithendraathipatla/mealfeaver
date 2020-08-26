@@ -1,9 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import ModalComponant from '../components/modal'
 import { css } from "@emotion/core"
 import Categories from "../components/categories"
+import BusinessPatnerSignupForm from '../components/BusinessPatnerform'
+import BusinessFormSignup from "../components/BusinessPatnerform"
+import DeliveryFormSignup from '../components/DeliveryForm'
 
 const IndexPage = () => {
   return (
@@ -22,7 +25,7 @@ const IndexPage = () => {
               nec mollis dolor urna nec neque. Quisque egestas consequat
               suscipit. Cras condimentum dui vitae laoreet feugiat.
             </p>
-            <a>Learn More</a>
+            <ModalComponant name="Learn More"><BusinessFormSignup/></ModalComponant>
           </div>
           <div>
             <img src="https://puzzlerbox.com/template-kits/food-delivery/wp-content/uploads/sites/37/elementor/thumbs/02-elements-30-food-delivery-icons-W5NQ6ZA-otks8k8vwl3ur0ri2maolpef6u6k5lljp3zmojeo6g.png" />
@@ -33,7 +36,7 @@ const IndexPage = () => {
               nec mollis dolor urna nec neque. Quisque egestas consequat
               suscipit. Cras condimentum dui vitae laoreet feugiat.
             </p>
-            <a>Learn More</a>
+            <ModalComponant name="Learn More"><DeliveryFormSignup/></ModalComponant>
           </div>
         </div>
       </div>
