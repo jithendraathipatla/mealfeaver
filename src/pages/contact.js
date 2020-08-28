@@ -69,7 +69,7 @@ const About = () => {
             <SelectComponant />
             <br />
             <div style={{ textAlign: "center" }}>
-              <button>Send Message</button>
+              <button css={button}>Send Message</button>
             </div>
           </div>
           <div css={last}>
@@ -83,7 +83,6 @@ const About = () => {
               <br />
               Monday – Friday, 9:30 am – 5:30 pm
               <br />
-              
               <a href="#">Get Directions</a>
               <br />
             </p>
@@ -156,5 +155,20 @@ const two = css`
     color: #7a7a7a;
     font-weight: 700;
     padding-left: 5px;
+  }
+`
+const button = css`
+  background-color: #ee931b;
+  color: #ffffff;
+  border: none;
+  font-size: 12px;
+  padding: 7px 30px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  :hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 `

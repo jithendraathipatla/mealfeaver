@@ -10,7 +10,7 @@ const DeliveryFormSignup = () => {
       <TextFieldComponant label="Your Emailid"  id="outlined-size-small" size="small" />
       <TextFieldComponant label="Your Phone Number"  id="outlined-size-small" size="small"/>
       <div style={{ textAlign: "center" }}>
-        <button>Submit</button>
+        <button css={button}>Submit</button>
       </div>
     </div>
   )
@@ -23,4 +23,20 @@ const main = css`
       font-size:20px;
       text-align: center;
   }
+`
+
+const button = css`
+background-color: #EE931B;
+color: #FFFFFF;
+border: none;
+font-size: 12px;
+padding: 7px 30px;
+border-radius: 4px;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 0.7px;
+:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
 `

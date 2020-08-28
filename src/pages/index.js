@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import ModalComponant from '../components/modal'
 import { css } from "@emotion/core"
 import Categories from "../components/categories"
-import BusinessPatnerSignupForm from '../components/BusinessPatnerform'
+
 import BusinessFormSignup from "../components/BusinessPatnerform"
 import DeliveryFormSignup from '../components/DeliveryForm'
 

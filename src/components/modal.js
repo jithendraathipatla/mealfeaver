@@ -1,37 +1,38 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
+import React from "react"
+import { makeStyles } from "@material-ui/core/styles"
+import Modal from "@material-ui/core/Modal"
+import Backdrop from "@material-ui/core/Backdrop"
+import Fade from "@material-ui/core/Fade"
+import { css } from "@emotion/core"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 7, 3),
   },
-}));
+}))
 
 export default function TransitionsModal(props) {
-  const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
+  const classes = useStyles()
+  const [open, setOpen] = React.useState(false)
 
   const handleOpen = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return (
     <div>
-      <button type="button" onClick={handleOpen}>
+      <button type="button" css={modalbutton} onClick={handleOpen}>
         {props.name}
       </button>
       <Modal
@@ -47,11 +48,25 @@ export default function TransitionsModal(props) {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper}>
-            {props.children}
-          </div>
+          <div className={classes.paper}>{props.children}</div>
         </Fade>
       </Modal>
     </div>
-  );
+  )
 }
+
+const modalbutton = css`
+  background-color: #ee931b;
+  color: #ffffff;
+  border: none;
+  font-size: 12px;
+  padding: 7px 30px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  :hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+`

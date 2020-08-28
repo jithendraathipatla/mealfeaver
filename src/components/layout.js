@@ -11,7 +11,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
-
+import Logo from "../images/logo-mealfever.png"
 import Header from "./header"
 import "./layout.css"
 
@@ -30,16 +30,28 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <nav css={nav}>
-        <div style={{ zIndex: "100" }}>
-          <h4>Mealfeaver</h4>
+        <div style={{ zIndex: "100" }} css={logo}>
+          <Link to="/">
+            <img src={Logo} />
+          </Link>
         </div>
         <div css={navlinks}>
           <ul>
-            <Link to="/">Home</Link>
-            <Link to="/about">About Us</Link>
-            <Link to="/news">News Room</Link>
-            <Link to="/faq">FAQ</Link>
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/" activeClassName="active">
+              Home
+            </Link>
+            <Link to="/about" activeClassName="active">
+              About Us
+            </Link>
+            <Link to="/news" activeClassName="active">
+              News Room
+            </Link>
+            <Link to="/faq" activeClassName="active">
+              FAQ
+            </Link>
+            <Link to="/contact" activeClassName="active">
+              Contact Us
+            </Link>
           </ul>
         </div>
       </nav>
@@ -100,12 +112,19 @@ Layout.propTypes = {
 
 export default Layout
 
+const logo = css`
+  img {
+    height: 40px;
+    width: auto;
+    margin-bottom: 0px;
+  }
+`
 const nav = css`
  display: flex;
- justify-content: space-around;
+ justify-content: space-between;
  padding: 10px;
     width: 100%;
-    background: #ffa14c;
+    background: white;
     position: fixed !important;
     top: 0;
     left: 0;
@@ -118,19 +137,18 @@ const nav = css`
 const navlinks = css`
   z-index: 100;
   ul {
+    margin-bottom: 0px;
+    margin-top: 5px;
     a {
-      color: white;
-      -webkit-text-decoration: none;
+      color: #ffa14c;
       text-decoration: none;
-      padding-left: 40px;
-      letter-spacing: 0.2px;
-      font-size: 16px;
-      line-height: 1.8em;
-      font-weight: 600;
-      font-family: "Open Sans", Sans-serif;
-      :hover {
-        text-decoration: underline;
-      }
+      margin-left: 50px;
+      letter-spacing: 1.8px;
+      font-size: 17px;
+      line-height: 2;
+      font-weight: 550;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     }
   }
 `
@@ -147,7 +165,7 @@ const paragraph = css`
 
 const socialicons = css`
   display: flex;
-  padding-top: 10px;
+  padding-top: 12px;
   flex: 8;
   svg {
     color: #7591a2;

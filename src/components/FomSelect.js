@@ -36,18 +36,15 @@ export default function ControlledOpenSelect() {
 
   return (
     <div>
-     
-      <FormControl className={classes.formControl}>
-        <InputLabel id="demo-controlled-open-select-label">Your Query Regarding</InputLabel>
+      <FormControl variant="outlined" className={classes.formControl}>
+        <InputLabel id="demo-simple-select-outlined-label">Query Regarding</InputLabel>
         <Select
-          labelId="demo-controlled-open-select-label"
-          id="demo-controlled-open-select"
-          open={open}
-          onClose={handleClose}
-          onOpen={handleOpen}
+          labelId="demo-simple-select-outlined-label"
+          id="demo-simple-select-outlined-small"
           value={age}
           onChange={handleChange}
-          size="small"
+          label="Query Regarding"
+          size="Small"
         >
           <MenuItem value="">
             <em>None</em>

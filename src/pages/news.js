@@ -1,11 +1,14 @@
 import React from 'react'
+import LayoutComponant from '../components/layout'
 
 const About = () => {
     return(
-        <div>
-
-            I am from abouut  us Page
-        </div>
+        <LayoutComponant>
+            <div style={{padding:"200px"}}>
+            I am from News Room
+            </div>
+            
+        </LayoutComponant>
     )
 }
 
