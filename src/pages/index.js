@@ -23,7 +23,7 @@ const IndexPage = () => {
   `)
   return (
     <Layout>
-      <SEO title="Mealfever" />
+      <SEO title="MealFever" />
       <div>
         <div>
           <div css={firstBanner}>

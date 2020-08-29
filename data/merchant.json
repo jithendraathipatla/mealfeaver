@@ -1,0 +1,92 @@
+[
+  {
+    "category": "grocery",
+    "slug": "selvam-store",
+    "Merchant_Name": "selvam Store",
+    "price": "$15"
+  },
+  {
+    "category": "grocery",
+    "slug": "gayathri-store",
+    "title": "Gayathri Store",
+    "price": "$12"
+  },
+  {
+    "category": "fruits_and_vegitables",
+    "slug": "nirmala-store",
+    "title": "Nirmala Store",
+    "price": "$12"
+  },
+  {
+    "category": "fruits_and_vegitables",
+    "slug": "Amin-store",
+    "title": "Amin Ali Store",
+    "price": "$12"
+  },
+  {
+    "category": "fruits_and_vegitables",
+    "slug": "jithendra-store",
+    "title": "Jithendra Store",
+    "price": "$12"
+  },
+  {
+    "category": "fruits_and_vegitables",
+    "slug": "Amith-store",
+    "title": "Amith Store",
+    "price": "$12"
+  },
+  {
+    "category": "fruits_and_vegitables",
+    "slug": "Sarvanan-store",
+    "title": "sarvanan Store",
+    "price": "$12"
+  },
+  {
+    "category": "fruits_and_vegitables",
+    "slug": "other-store",
+    "title": "other Store",
+    "price": "$12"
+  },
+  {
+    "category": "fruits_and_vegitables",
+    "slug": "Irfan-store",
+    "title": "Irfan Store",
+    "price": "$12"
+  },
+  {
+    "category": "send_packages",
+    "slug": "other-store",
+    "title": "other Store",
+    "price": "$12"
+  },
+  {
+    "category": "meat_and_fish",
+    "slug": "gayathri-store",
+    "title": "Gayathri Store",
+    "price": "$12"
+  },
+  {
+    "category": "food_delivery",
+    "slug": "gayathri-store",
+    "title": "Gayathri Store",
+    "price": "$12"
+  },
+  {
+    "category": "medicines",
+    "slug": "gayathri-store",
+    "title": "Gayathri Store",
+    "price": "$12"
+  },
+  {
+    "category": "health_and_wellness",
+    "slug": "gayathri-store",
+    "title": "Gayathri Store",
+    "price": "$12"
+  },
+  {
+    "category": "gifts_and-life",
+    "slug": "gayathri-store",
+    "title": "Gayathri Store",
+    "price": "$12"
+  }
+]
