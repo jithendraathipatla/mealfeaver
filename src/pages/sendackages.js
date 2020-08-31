@@ -2,6 +2,8 @@ import React,{useState} from "react"
 import LayoutComponent from "../components/layout"
 import { css } from "@emotion/core"
 import AutoPlaceSuggest from "../components/autoPlaceSuggest"
+import SEO from "../components/seo"
+
 
 const FoodDelivery = () => {
     const [eventvenue, seteventvenue] = useState('')
@@ -10,7 +12,9 @@ const FoodDelivery = () => {
         _venue = value;
     };
   return (
+   
     <LayoutComponent>
+         <SEO title="Send Packages || MealFever" />
       <div css={mainheader}>
         <br />
         <br />

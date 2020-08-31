@@ -70,7 +70,7 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv54LQ6DYJHNZQ48-UWbj1wH06uYTWMKQ&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv54LQ6DYJHNZQ48-UWbj1wH06uYTWMKQ&libraries=places"></script>
       </Helmet>
   )
 }
