@@ -32,6 +32,7 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
+      
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
@@ -68,7 +69,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv54LQ6DYJHNZQ48-UWbj1wH06uYTWMKQ&libraries=places"></script>
+      </Helmet>
   )
 }
 
