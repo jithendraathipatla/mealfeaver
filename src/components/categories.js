@@ -50,7 +50,7 @@ const Categories = () => {
       link: "/petsupplies",
     },
     {
-      name: "Health And Wellness",
+      name: "Any Store in Khidderpore",
       Image: HealthAndWellness,
       link: "/healthandwellness",
     },

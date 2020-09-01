@@ -113,5 +113,5 @@ const sendpackages = css`
 const mainheader = css`
   background: #ffa14c;
   border-top: #242424;
-  padding: 15px 170px;
+  padding: 15px 80px;
 `
