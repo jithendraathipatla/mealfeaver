@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `One store for your Grocery Needs`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Mealfeaver is all-in-one shop for all your adily needs sarting from Grocery, Food or Any Essentials.`,
     author: `@gatsbyjs`,
   },
   plugins: [

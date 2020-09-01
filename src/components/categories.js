@@ -64,7 +64,7 @@ const Categories = () => {
   const displayingCategories = () => {
     return cate.map((item, i) => {
       return (
-           <Link to={item.link}>
+           <Link to={item.link} key={i}>
            <div key={i} css={card}>
             <img src={item.Image} />
             <br />
