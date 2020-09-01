@@ -172,7 +172,7 @@ export default function VerticalLinearStepper() {
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((label, index) => (
           <Step key={label}>
-            <StepLabel>{label}</StepLabel>
+            <StepLabel><span css={lab}>{label}</span></StepLabel>
             <StepContent>
               <Typography>{getStepContent(index)}</Typography>
               <div className={classes.actionsContainer}>
@@ -209,6 +209,11 @@ export default function VerticalLinearStepper() {
     </div>
   )
 }
+
+const lab= css`
+font-weight: 600;
+font-size: 20px;
+`
 
 const checkboxform = css`
   display: flex;
