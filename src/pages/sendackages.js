@@ -20,7 +20,7 @@ const FoodDelivery = () => {
         <StepperContainer />
         <div css={sendpackagesTerms}>
           <div css={sendpackagesTermsStyle}>
-            <p style={{color:"green", fontWeight:"600"}}>Some do’s &amp; Dont’s</p>
+            <p style={{color:"green", fontWeight:"600", fontSize:"20px"}}>Some do’s &amp; Dont’s</p>
             <div>
               <div>
                 <span style={{color:"#171e30", fontWeight:"600"}} font-size="2">
@@ -77,6 +77,7 @@ const imageContainer = css`
   img{
     height:300px;
     margin-bottom:0px;
+    margin-top:60px;
   }
 `
 
@@ -97,7 +98,7 @@ box-sizing: border-box;
     -webkit-box-pack: justify;
     justify-content: space-between;
     background-color: white;
-    font-family: Gilroy, sans-serif;;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 `
 
