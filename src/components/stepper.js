@@ -8,6 +8,8 @@ import Button from "@material-ui/core/Button"
 import Paper from "@material-ui/core/Paper"
 import Typography from "@material-ui/core/Typography"
 import FormField from "../components/FormField"
+import Checkbox from "@material-ui/core/Checkbox"
+import { css } from "@emotion/core"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -26,7 +28,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 function getSteps() {
-  return ["Pickup Details", "Drop Details", "Submit"]
+  return ["Pickup Details", "Drop Details", "Select Package Content", "Submit"]
 }
 
 function getStepContent(step) {
@@ -40,28 +42,24 @@ function getStepContent(step) {
               id="outlined-size-small"
               size="small"
             />
-              <FormField
+            <FormField
               label="FLAT, FLOOR, BUILDING NAME"
               id="outlined-size-small"
               size="small"
             />
+            <FormField label="LANDMARK" id="outlined-size-small" size="small" />
             <FormField
-              label="LANDMARK"
-              id="outlined-size-small"
-              size="small"
-            />
-              <FormField
               label="CONTACT PERSON NAME"
               id="outlined-size-small"
               size="small"
             />
-              <FormField
+            <FormField
               label="CONTACT DETAILS"
               id="outlined-size-small"
               size="small"
             />
           </form>
-          <br/>
+          <br />
         </div>
       )
     case 1:
@@ -73,32 +71,80 @@ function getStepContent(step) {
               id="outlined-size-small"
               size="small"
             />
-              <FormField
+            <FormField
               label="FLAT, FLOOR, BUILDING NAME"
               id="outlined-size-small"
               size="small"
             />
+            <FormField label="LANDMARK" id="outlined-size-small" size="small" />
             <FormField
-              label="LANDMARK"
-              id="outlined-size-small"
-              size="small"
-            />
-              <FormField
               label="CONTACT PERSON NAME"
               id="outlined-size-small"
               size="small"
             />
-              <FormField
+            <FormField
               label="CONTACT DETAILS"
               id="outlined-size-small"
               size="small"
             />
           </form>
-          <br/>
+          <br />
         </div>
       )
     case 2:
-      return ``;
+      return (
+        <div>
+          <form>
+            <div css={checkboxform}>
+              <Checkbox
+                value="checkedA"
+                inputProps={{ "aria-label": "Checkbox A" }}
+              />
+              <h5> Documents | Books</h5>
+            </div>
+
+            <div css={checkboxform}>
+              <Checkbox
+                value="checkedA"
+                inputProps={{ "aria-label": "Checkbox A" }}
+              />
+              <h5> Cloths | Accessries</h5>
+            </div>
+
+            <div css={checkboxform}>
+              <Checkbox
+                value="checkedA"
+                inputProps={{ "aria-label": "Checkbox A" }}
+              />
+              <h5> Food | Flowers</h5>
+            </div>
+
+            <div css={checkboxform}>
+              <Checkbox
+                value="checkedA"
+                inputProps={{ "aria-label": "Checkbox A" }}
+              />
+              <h5> Household Items</h5>
+            </div>
+            <div css={checkboxform}>
+              <Checkbox
+                value="checkedA"
+                inputProps={{ "aria-label": "Checkbox A" }}
+              />
+              <h5> Sports & Other Equipment</h5>
+            </div>
+            <div css={checkboxform}>
+              <Checkbox
+                value="checkedA"
+                inputProps={{ "aria-label": "Checkbox A" }}
+              />
+              <h5> Electronic Item </h5>
+            </div>
+          </form>
+        </div>
+      )
+    case 3:
+      return ``
     default:
       return "Unknown step"
   }
@@ -163,3 +209,10 @@ export default function VerticalLinearStepper() {
     </div>
   )
 }
+
+const checkboxform = css`
+  display: flex;
+  h5 {
+    padding-top: 12.5px;
+  }
+`
