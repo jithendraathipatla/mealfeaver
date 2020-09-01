@@ -4,7 +4,7 @@ import PlacesAutocomplete, {
   getLatLng,
 } from 'react-places-autocomplete';
 import Geocode from 'react-geocode';
-Geocode.setApiKey('AIzaSyBkRitJxZxgouIAwUioGysWjYRJ43dBkPI');
+Geocode.setApiKey('AIzaSyAv54LQ6DYJHNZQ48-UWbj1wH06uYTWMKQ');
 function codeAddress(lat, lng) {
   // geocoder.geocode({ address: address }, function(results, status) {
   //   var city = results[0].address_components[2].long_name;
