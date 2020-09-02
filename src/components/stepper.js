@@ -40,6 +40,10 @@ export default function VerticalLinearStepper() {
     let data1 = localStorage.getItem("info1")
     let usefulData1 = JSON.parse(data1)
     setloadPickupcustomerInfo1(usefulData1)
+    if(activeStep === 1){
+        setdisabled(true);
+        console.log("hi")
+    }
   }, [])
 
   const [loadPickupcustomerInfo, setloadPickupcustomerInfo] = useState("")
@@ -49,17 +53,11 @@ export default function VerticalLinearStepper() {
   const [
     pickupCustomer_BuildingName,
     setpickupCustomer_BuildingName,
-  ] = useState(loadPickupcustomerInfo.flat)
+  ] = useState("")
   const [disabled, setdisabled] = useState(false)
-  const [pickupCustomer_Landmark, setpickupCustomer_Landmark] = useState(
-    loadPickupcustomerInfo.landmark
-  )
-  const [pickupCustomer_Name, setpickupCustomer_Name] = useState(
-    loadPickupcustomerInfo.name
-  )
-  const [pickupCustomer_PhoneNumber, setpickupCustomer_PhoneNumber] = useState(
-    loadPickupcustomerInfo.phone
-  )
+  const [pickupCustomer_Landmark, setpickupCustomer_Landmark] = useState("")
+  const [pickupCustomer_Name, setpickupCustomer_Name] = useState("")
+  const [pickupCustomer_PhoneNumber, setpickupCustomer_PhoneNumber] = useState()
 
   const [loaddropcustomerInfo, setloaddropcustomerInfo] = useState("")
 
@@ -76,10 +74,7 @@ export default function VerticalLinearStepper() {
     setFinishingPickUpCustomerInfo,
   ] = useState([])
 
-  const [
-    FinishingDropCustomerInfo,
-    setFinishingDropCustomerInfo,
-  ] = useState([])
+  const [FinishingDropCustomerInfo, setFinishingDropCustomerInfo] = useState([])
 
   const [activeStep, setActiveStep] = React.useState(0)
 
@@ -87,10 +82,23 @@ export default function VerticalLinearStepper() {
 
   const handleNext = () => {
     setActiveStep(prevActiveStep => prevActiveStep + 1)
+       if(activeStep === 1 && pickupCustomer_PhoneNumber.length == 10){
+        setdisabled(true)
+       }
+        setdisabled(false)
+       
+  }
+
+  function getActiveState(){
+    if(activeStep === 1){
+        setdisabled(true);
+        console.log("hi")
+    }
   }
 
   const handleBack = () => {
     setActiveStep(prevActiveStep => prevActiveStep - 1)
+    setdisabled(true)
   }
 
   const handleReset = () => {
@@ -141,11 +149,13 @@ export default function VerticalLinearStepper() {
   const handeldropCustomerPhoneNumber = e => {
     setdropCustomer_PhoneNumber(e.target.value)
     validatingDataforDrop(e.target.value.length)
+   
   }
 
   function validatingDataforDrop(value2) {
     switch (true) {
       case value2 === 10:
+           
         setFinishingDropCustomerInfo([
           {
             area: dropCustomer_AreaName,
@@ -155,6 +165,7 @@ export default function VerticalLinearStepper() {
             phone: dropCustomer_PhoneNumber,
           },
         ])
+       
         setdisabled(true)
         localStorage.setItem(
           "info1",
@@ -167,6 +178,7 @@ export default function VerticalLinearStepper() {
           })
         )
         break
+        
       default:
         setFinishingPickUpCustomerInfo([])
         setdisabled(false)
@@ -241,6 +253,7 @@ export default function VerticalLinearStepper() {
                 label="CONTACT DETAILS"
                 id="outlined-size-small"
                 size="small"
+                type="number"
                 value={pickupCustomer_PhoneNumber}
                 handelTextField={handelCustomerPhoneNumber}
               />
@@ -251,7 +264,7 @@ export default function VerticalLinearStepper() {
       case 1:
         return (
           <div>
-           <form>
+            <form>
               <FormField
                 label="AREA NAME"
                 id="outlined-size-small"
@@ -285,6 +298,7 @@ export default function VerticalLinearStepper() {
                 id="outlined-size-small"
                 size="small"
                 value={dropCustomer_PhoneNumber}
+                type="number"
                 handelTextField={handeldropCustomerPhoneNumber}
               />
             </form>
@@ -351,7 +365,7 @@ export default function VerticalLinearStepper() {
   }
 
   return (
-    console.log(loadPickupcustomerInfo.area),
+    console.log(activeStep),
     (
       <div className={classes.root}>
         <Stepper activeStep={activeStep} orientation="vertical">

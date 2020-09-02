@@ -12,12 +12,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function BasicTextFields(props) {
-  console.log(props.value)
   const classes = useStyles();
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <TextField id={props.id} label={props.label} variant="outlined"  value={props.value} fullWidth size={props.size} onChange={props.handelTextField} required/>
+      <TextField id={props.id} label={props.label} variant="outlined"  value={props.value} type={props.type} fullWidth size={props.size} onChange={props.handelTextField} required/>
     </form>
   );
 }

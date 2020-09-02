@@ -6,7 +6,6 @@ import StepperContainer from "../components/stepper"
 import Logo from "../images/favicon.png"
 
 const FoodDelivery = () => {
-
   return (
     <LayoutComponent>
       <SEO title="Send Packages | MealFever" />
@@ -20,47 +19,60 @@ const FoodDelivery = () => {
         <StepperContainer />
         <div css={sendpackagesTerms}>
           <div css={sendpackagesTermsStyle}>
-            <p style={{color:"green", fontWeight:"600", fontSize:"20px"}}>Some do’s &amp; Dont’s</p>
+            <p style={{ color: "green", fontWeight: "600", fontSize: "20px" }}>
+              Some do’s &amp; Dont’s
+            </p>
             <div>
               <div>
-                <span style={{color:"#171e30", fontWeight:"600"}} font-size="2">
+                <span
+                  style={{ color: "#171e30", fontWeight: "600" }}
+                  font-size="2"
+                >
                   No Purchases -{" "}
                 </span>
-                <span style={{color:"#171e30"}}>
+                <span style={{ color: "#171e30" }}>
                   Delivery partner would not be able to make any purchase
                 </span>
               </div>
-              <br/>
+              <br />
               <div>
-                <span style={{color:"#171e30", fontWeight:"600"}} font-size="2">
+                <span
+                  style={{ color: "#171e30", fontWeight: "600" }}
+                  font-size="2"
+                >
                   Package Weight -{" "}
                 </span>
-                <span style={{color:"#171e30"}}>
+                <span style={{ color: "#171e30" }}>
                   We cannot deliver items that can’t be easily carried on bike
                 </span>
               </div>
-              <br/>
+              <br />
               <div class="sc-bdVaJa bLipjj">
-                <span style={{color:"#171e30", fontWeight:"600"}} font-size="2">
+                <span
+                  style={{ color: "#171e30", fontWeight: "600" }}
+                  font-size="2"
+                >
                   No Autos/Cabs -{" "}
                 </span>
-                <span style={{color:"#171e30"}}>
+                <span style={{ color: "#171e30" }}>
                   We will not be able to get something transported via these
                 </span>
               </div>
-              <br/>
+              <br />
               <div class="sc-bdVaJa bLipjj">
-                <span style={{color:"#171e30", fontWeight:"600"}} font-size="2">
+                <span
+                  style={{ color: "#171e30", fontWeight: "600" }}
+                  font-size="2"
+                >
                   Restricted/Illegal Item -{" "}
                 </span>
-                <span style={{color:"#171e30"}}>
+                <span style={{ color: "#171e30" }}>
                   Please don’t hand over any restricted item
                 </span>
               </div>
               <div css={imageContainer}>
-                     <img src={Logo}/>
+                <img src={Logo} />
               </div>
-
             </div>
           </div>
         </div>
@@ -71,13 +83,12 @@ const FoodDelivery = () => {
 
 export default FoodDelivery
 
-
 const imageContainer = css`
   text-align: center;
-  img{
-    height:300px;
-    margin-bottom:0px;
-    margin-top:60px;
+  img {
+    height: 300px;
+    margin-bottom: 0px;
+    margin-top: 60px;
   }
 `
 
