@@ -45,14 +45,9 @@ const Categories = () => {
       link: "/medicines",
     },
     {
-      name: "Pet Supplies",
-      Image: PetSupplies,
-      link: "/petsupplies",
-    },
-    {
       name: "Any Store in Khidderpore",
       Image: HealthAndWellness,
-      link: "/healthandwellness",
+      link: "/anystore",
     },
     {
       name: "Gifts And Life",
