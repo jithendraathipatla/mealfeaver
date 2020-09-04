@@ -10,7 +10,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { css } from "@emotion/core"
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import Logo from "../images/logo-mealfever.png"
 import Header from "./header"
 import "./layout.css"
