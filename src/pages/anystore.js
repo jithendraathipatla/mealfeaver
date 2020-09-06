@@ -1,12 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import LayoutComponent from "../components/layout"
 import { css } from "@emotion/core"
 import PaperComponant from "../components/materialUiComponents/paper"
-import FormField from "../components/FormField"
+import Accordion from '../components/materialUiComponents/accordion'
 import Logo from "../images/favicon.png"
 
-
 const FoodDelivery = () => {
+
   return (
     <LayoutComponent>
       <div css={mainheader}>
@@ -19,109 +19,77 @@ const FoodDelivery = () => {
         <PaperComponant>
           <div css={insideform}>
             <div css={form}>
-              <div style={{ textAlign: "center" }}>
-                <h3>Store Information</h3>
-              </div>
-              <form>
-                <FormField
-                  label="STORE NAME"
-                  id="outlined-size-small"
-                  size="small"
-                />
-              </form>
-              <form>
-                <FormField
-                  label="STORE ADRESS"
-                  id="outlined-size-small"
-                  size="small"
-                />
-              </form>
-              <form>
-                <FormField
-                  label="FLAT / BUILDING NAME OF STORE"
-                  id="outlined-size-small"
-                  size="small"
-                />
-              </form>
-
-              <form>
-                <FormField
-                  label="LANDMARK"
-                  id="outlined-size-small"
-                  size="small"
-                />
-              </form>
-              <form>
-                <FormField
-                  label="YOUR PHONE NUMBER"
-                  id="outlined-size-small"
-                  size="small"
-                />
-                <div style={{ textAlign: "center" }}>
-                  <button css={button}>Submit</button>
-                </div>
-              </form>
-            </div>
+              
+          <Accordion/>
+              
             
+            </div>
             <div css={sendpackagesTerms}>
-          <div css={sendpackagesTermsStyle}>
-            <p style={{ color: "green", fontWeight: "600", fontSize: "20px" }}>
-              How It Works ?
-            </p>
-            <div>
-              <div>
-                <span
-                  style={{ color: "#171e30", fontWeight: "600" }}
-                  font-size="2"
+              <div css={sendpackagesTermsStyle}>
+                <p
+                  style={{
+                    color: "green",
+                    fontWeight: "600",
+                    fontSize: "20px",
+                  }}
                 >
-                  WE GET THE STORE INFO -{" "}
-                </span>
-                <span style={{ color: "#171e30" }}>
-                  Delivery partner would not be able to make any purchase
-                </span>
-              </div>
-              <br />
-              <div>
-                <span
-                  style={{ color: "#171e30", fontWeight: "600" }}
-                  font-size="2"
-                >
-                CALL FROM THE STORE -{" "}
-                </span>
-                <span style={{ color: "#171e30" }}>
-                  We cannot deliver items that can’t be easily carried on bike
-                </span>
-              </div>
-              <br />
-              <div >
-                <span
-                  style={{ color: "#171e30", fontWeight: "600" }}
-                  font-size="2"
-                >
-                  NOTING DOWN ITEMS -{" "}
-                </span>
-                <span style={{ color: "#171e30" }}>
-                  We will not be able to get something transported via these
-                </span>
-              </div>
-              <br />
-              <div >
-                <span
-                  style={{ color: "#171e30", fontWeight: "600" }}
-                  font-size="2"
-                >
-                  DELIVERY OF LISTED PRODUCTS -{" "}
-                </span>
-                <span style={{ color: "#171e30" }}>
-                  Please don’t hand over any restricted item
-                </span>
-              </div>
-              <div css={imageContainer}>
-                <img src={Logo} />
+                  How It Works ?
+                </p>
+                <div>
+                  <div>
+                    <span
+                      style={{ color: "#171e30", fontWeight: "600" }}
+                      font-size="2"
+                    >
+                      WE GET THE STORE INFO -{" "}
+                    </span>
+                    <span style={{ color: "#171e30" }}>
+                      Delivery partner would not be able to make any purchase
+                    </span>
+                  </div>
+                  <br />
+                  <div>
+                    <span
+                      style={{ color: "#171e30", fontWeight: "600" }}
+                      font-size="2"
+                    >
+                      CALL FROM THE STORE -{" "}
+                    </span>
+                    <span style={{ color: "#171e30" }}>
+                      We cannot deliver items that can’t be easily carried on
+                      bike
+                    </span>
+                  </div>
+                  <br />
+                  <div>
+                    <span
+                      style={{ color: "#171e30", fontWeight: "600" }}
+                      font-size="2"
+                    >
+                      NOTING DOWN ITEMS -{" "}
+                    </span>
+                    <span style={{ color: "#171e30" }}>
+                      We will not be able to get something transported via these
+                    </span>
+                  </div>
+                  <br />
+                  <div>
+                    <span
+                      style={{ color: "#171e30", fontWeight: "600" }}
+                      font-size="2"
+                    >
+                      DELIVERY OF LISTED PRODUCTS -{" "}
+                    </span>
+                    <span style={{ color: "#171e30" }}>
+                      Please don’t hand over any restricted item
+                    </span>
+                  </div>
+                  <div css={imageContainer}>
+                    <img src={Logo} />
+                  </div>
+                </div>
               </div>
             </div>
-            </div>
-          </div>
           </div>
         </PaperComponant>
       </div>
@@ -159,7 +127,6 @@ box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }`
 
-
 const insideform = css`
   padding: 20px 40px;
   display: grid;
@@ -173,26 +140,11 @@ const form = css`
 `
 const mainform = css`
   padding: 10px 140px;
-  background: rgb(240,245,247);
+  background: rgb(240, 245, 247);
 `
 
 const mainheader = css`
   background: #ffa14c;
   border-top: #242424;
   padding: 15px 170px;
-`
-const button = css`
-  background-color: #ee931b;
-  color: #ffffff;
-  border: none;
-  font-size: 12px;
-  padding: 7px 30px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.7px;
-  :hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
 `
