@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography"
 import FormField from "../FormField"
 import { css } from "@emotion/core"
 import axios from 'axios'
+import BackdropComponant from './backdrop'
 
 const Accordion = withStyles({
   root: {
@@ -47,7 +48,7 @@ const AccordionSummary = withStyles({
 export default function CustomizedAccordions() {
   const [expanded, setExpanded] = React.useState("panel1")
   const [next, setnext] = useState(false);
-
+  const [open, setOpen] = useState(false);
   const [storename, setstorename] = useState("")
   const [storeaddress, setstoreaddress] = useState("")
   const [storebuildingname, setstorebuildingname] = useState("")
@@ -62,7 +63,7 @@ export default function CustomizedAccordions() {
   const [yourlandmark, setyourlandmark] = useState("")
 
   const handelanystoresubmit = () => {
-    setnext(true)
+    setOpen(true)
     let recquiredjson = {
       storename: storename,
       storeaddress: storeaddress,
@@ -101,6 +102,7 @@ export default function CustomizedAccordions() {
     axios.post(` https://6uiv5qngt4.execute-api.ap-south-1.amazonaws.com/dev/service/send-package`, requireddata)
     .then((data)=>{
       console.log(data);
+      setOpen(false)
     })
     .catch((e)=>{
       console.log(e);
@@ -215,7 +217,7 @@ export default function CustomizedAccordions() {
             <br />
            
           </div>
-        
+        <BackdropComponant open={open}/>
         </div>
       </Accordion>
     </div>
