@@ -9,6 +9,7 @@ import { css } from "@emotion/core"
 import axios from 'axios'
 import BackdropComponant from './backdrop'
 
+
 const Accordion = withStyles({
   root: {
     border: "1px solid rgba(0, 0, 0, .125)",
@@ -49,6 +50,7 @@ export default function CustomizedAccordions() {
   const [expanded, setExpanded] = React.useState("panel1")
   const [next, setnext] = useState(false);
   const [open, setOpen] = useState(false);
+  const [dialogueopen,setdialogueopen] = useState(true)
   const [storename, setstorename] = useState("")
   const [storeaddress, setstoreaddress] = useState("")
   const [storebuildingname, setstorebuildingname] = useState("")
@@ -103,6 +105,7 @@ export default function CustomizedAccordions() {
     .then((data)=>{
       console.log(data);
       setOpen(false)
+      alert("We have got your deails, We will soon assign you a delivery patner")
     })
     .catch((e)=>{
       console.log(e);
@@ -212,7 +215,7 @@ export default function CustomizedAccordions() {
 
           <div style={{ textAlign: "center" }}>
             <button css={button} onClick={handelanystoresubmit}>
-              {next === false ? "submit" : "loading..."}
+             Submit
             </button>
             <br />
            
