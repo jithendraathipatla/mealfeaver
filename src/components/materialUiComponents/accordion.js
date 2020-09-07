@@ -105,7 +105,7 @@ export default function CustomizedAccordions() {
     .then((data)=>{
       console.log(data);
       setOpen(false)
-      alert("We have got your deails, We will soon assign you a delivery patner")
+      alert("We have got your deails, We will soon assign you a")
     })
     .catch((e)=>{
       console.log(e);

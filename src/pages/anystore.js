@@ -2,11 +2,11 @@ import React, { useState } from "react"
 import LayoutComponent from "../components/layout"
 import { css } from "@emotion/core"
 import PaperComponant from "../components/materialUiComponents/paper"
-import Accordion from '../components/materialUiComponents/accordion'
+import Accordion from "../components/materialUiComponents/accordion"
 import Logo from "../images/favicon.png"
+import AnystoreComponant from "../components/materialUiComponents/anystoresteppercontainer"
 
 const FoodDelivery = () => {
-
   return (
     <LayoutComponent>
       <div css={mainheader}>
@@ -19,10 +19,7 @@ const FoodDelivery = () => {
         <PaperComponant>
           <div css={insideform}>
             <div css={form}>
-              
-          <Accordion/>
-              
-            
+              <AnystoreComponant />
             </div>
             <div css={sendpackagesTerms}>
               <div css={sendpackagesTermsStyle}>
